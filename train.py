@@ -62,7 +62,7 @@ if __name__ == '__main__':
     SHOW_FREQ = 1
     TEST_FREQ = 1
     SAVE_FREQ = 5
-    DATA_FILE_NAME = './data/acfgSSL_{}/'.format(NODE_FEATURE_DIM)
+    DATA_FILE_NAME = './data/data_danger.json'
     SOFTWARE=('openssl-1.0.1f-', 'openssl-1.0.1u-')
     OPTIMIZATION=('-O0', '-O1','-O2','-O3')
     COMPILER=('armeb-linux', 'i586-linux', 'mips-linux')
@@ -71,8 +71,7 @@ if __name__ == '__main__':
     FUNC_NAME_DICT = {}
 
     # Process the input graphs
-    F_NAME = get_f_name(DATA_FILE_NAME, SOFTWARE, COMPILER,
-            OPTIMIZATION, VERSION)
+    F_NAME = get_f_name(DATA_FILE_NAME)
     FUNC_NAME_DICT = get_f_dict(F_NAME)
      
 
