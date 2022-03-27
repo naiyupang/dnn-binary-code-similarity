@@ -4,13 +4,9 @@ from sklearn.metrics import auc, roc_curve
 from graphnnSiamese import graphnn
 import json
 
-def get_f_name(DATA, SF, CM, OP, VS):
+def get_f_name(DATA):
     F_NAME = []
-    for sf in SF:
-        for cm in CM:
-            for op in OP:
-                for vs in VS:
-                    F_NAME.append(DATA+sf+cm+op+vs+".json")
+    F_NAME.append(DATA)
     return F_NAME
 
 
